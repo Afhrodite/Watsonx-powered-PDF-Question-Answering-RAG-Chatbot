@@ -51,13 +51,13 @@ http://localhost:7860
 
 Below are two screenshots demonstrating how the application works:
 
-### 🖥️ Launch Screen
+### Launch Screen
 
 When you open the application in your browser, you'll see a simple Gradio interface allowing you to upload a PDF and input a query:
 
 ![App Interface](images_and_pdf/example1.png)
 
-### 💬 Question & Answer
+### Question & Answer
 
 Here’s an example of asking a question about the uploaded PDF. The answer is generated using the Mixtral-8x7B LLM and grounded in the document content:
 
@@ -65,11 +65,11 @@ Here’s an example of asking a question about the uploaded PDF. The answer is g
 
 ## Future ideas
 
-- 📚 Add support for uploading multiple PDFs at once  
-- 🔍 Implement semantic search preview before answering  
-- 💾 Add history logging for previous Q&A sessions  
-- 🧠 Swap in IBM Granite models when available for comparison  
-- 🐳 Include a Docker container and Hugging Face Space deployment option  
+- Add support for uploading multiple PDFs at once  
+- Implement semantic search preview before answering  
+- Add history logging for previous Q&A sessions  
+- Swap in IBM Granite models when available for comparison  
+- Include a Docker container and Hugging Face Space deployment option  
 
 ## License
 
@@ -79,7 +79,7 @@ All code authored for this repo is released under the [Apache License 2.0](https
 
 ## Acknowledgements
 
-- 🏢 **IBM** – for offering the hands-on course that inspired and enabled this project  
-- 🧩 **LangChain** – for the powerful RAG architecture and document tools  
-- ⚙️ **Watsonx.ai** – for robust embedding and LLM support  
-- 💻 **Gradio** – for making interactive AI apps quick to prototype
+- **IBM** – for offering the hands-on course that inspired and enabled this project  
+- **LangChain** – for the powerful RAG architecture and document tools  
+- **Watsonx.ai** – for robust embedding and LLM support  
+- **Gradio** – for making interactive AI apps quick to prototype
