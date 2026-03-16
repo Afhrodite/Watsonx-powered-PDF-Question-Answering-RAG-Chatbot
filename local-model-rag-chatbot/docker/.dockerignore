@@ -1,0 +1,20 @@
+# Ignore Python cache
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+
+# Ignore local envs
+venv/
+env/
+
+# Ignore git files
+.git
+.gitignore
+
+# Ignore temp PDFs and vector stores
+vector_store/
+*.pdf
+
+# Ignore editor configs
+.vscode/

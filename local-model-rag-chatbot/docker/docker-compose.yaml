@@ -1,0 +1,12 @@
+version: "3.9"
+
+services:
+  rag-chatbot:
+    build: .
+    container_name: rag-chatbot
+    ports:
+      - "7860:7860"
+    volumes:
+      - ./models:/app/models
+      - ./vector_store:/app/vector_store
+    restart: unless-stopped

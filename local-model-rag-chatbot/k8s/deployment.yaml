@@ -1,0 +1,48 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: rag-chatbot
+  labels:
+    app: rag-chatbot
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: rag-chatbot
+  template:
+    metadata:
+      labels:
+        app: rag-chatbot
+    spec:
+      containers:
+      - name: rag-chatbot
+        image: your-dockerhub-username/rag-chatbot:latest
+        ports:
+        - containerPort: 7860
+        volumeMounts:
+        - name: models
+          mountPath: /app/models
+        - name: vector-store
+          mountPath: /app/vector_store
+      volumes:
+      - name: models
+        hostPath:
+          path: /path/on/host/models
+      - name: vector-store
+        hostPath:
+          path: /path/on/host/vector_store
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: rag-chatbot-service
+spec:
+  selector:
+    app: rag-chatbot
+  ports:
+    - protocol: TCP
+      port: 7860
+      targetPort: 7860
+  type: LoadBalancer
